@@ -1,0 +1,7 @@
+Filename    bottom_right
+Sensitivity 5eV
+C1  50%
+N1  10%
+O1  5%
+Mo1 15%
+W1  20%
