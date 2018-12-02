@@ -305,9 +305,9 @@ class Engine():
             print("Select Element(s)")
             return
 
-        for dataset in range(self.__class__._files):
+        for dataset in range(len(self.__class__._files)):
             for ele in self.__class__._eles:
-                if self.__class__.points[(dataset, ele)][0][0] == -1 or self.__class__.points[(dataset, ele)][1][0] == -1:
+                if self.__class__._points[(dataset, ele)][0][0] == -1 or self.__class__._points[(dataset, ele)][1][0] == -1:
                     print("Missing peaks and/or valleys")
                     return
 
