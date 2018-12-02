@@ -270,6 +270,20 @@ class Engine():
         self.update_eleF()
         self.eleW.destroy()
 
+    _shift = 0
+    def select_shift(self):
+        if(len(self.__class__._files) == 0):
+            return
+        self.shiftW = tk.Toplevel(self.__class__._root)
+        tk.Label(self.shiftW, text="Energy Shift").grid(row=0)
+        self.shiftEntry = tk.Entry(self.shiftW)
+        self.shiftEntry.grid(row=1)
+        tk.Button(self.shiftW, text="Submit", command=self.submit_shift).grid(row=2)
+
+    def submit_shift(self):
+        self.__class__._shift = self.shiftEntry.get()
+        self.shiftW.destroy()
+
     def input_file(self, loc):
         #Input and configure differentiated dataset
         with open(loc, 'r') as f:

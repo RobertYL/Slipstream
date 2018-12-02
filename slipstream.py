@@ -66,7 +66,6 @@ class MainApplication(tk.Frame):
         #File Submenu
         self.fileMenu = tk.Menu(self.menu)
         self.fileMenu.add_command(label="Open Files", command=self.engine.select_files)
-        self.fileMenu.add_command(label="Draw")
         self.fileMenu.add_command(label="Find Peaks", command=self.engine.find)
         self.fileMenu.add_command(label="Analyze", command=self.engine.analyze)
         self.menu.add_cascade(label="File", menu=self.fileMenu)
@@ -74,6 +73,7 @@ class MainApplication(tk.Frame):
         #Settings Submenu
         self.settingsMenu = tk.Menu(self.menu)
         self.settingsMenu.add_command(label="Elements", command=self.engine.select_eles)
+        self.settingsMenu.add_command(label="Energy Shift", command=self.engine.select_shift)
         self.menu.add_cascade(label="Settings", menu=self.settingsMenu)
 
 if __name__ == '__main__':
